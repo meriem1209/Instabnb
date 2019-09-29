@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Hello homeController!{% endblock %}
+
+
+{% block body %}
+
+
+    <div class="example-wrapper">
+        <h1>Hello {{ controller_name }}! ✅</h1>
+        {% for tableau  in tableau %}
+
+            {{ tableau.id }} <br/>
+            {{ tableau.title }} <br/>
+            {{ tableau.content }} <br/>
+            {{ tableau.price }} <br/>
+            <br/>
+            <a href="{{ path('detail', {id: tableau.id}) }}">{{ "bouton.allerLaListe" | trans }}</a>
+            <br/>
+            <br/>
+        {% endfor %}
+        <a href="{{ path('home') }}">{{ "bouton.GoHome"|trans }}</a>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Hello homeController!{% endblock %}
+
+
+{% block body %}
+
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    {{ form_row(form.title) }}
+    {{ form_row(form.price) }}
+    {{ form_row(form.content) }}
+
+    <button type="submit">{{ "submit"| trans }}</button>
+
+    {{ form_end(form) }}
+
+{% endblock %}
